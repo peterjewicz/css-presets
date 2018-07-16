@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Flex Box Vertical Center</title>
+    <style>
+
+      .content {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 100%;
+        background: black;
+      }
+
+      .wrapper {
+        height: 100vh;
+      }
+
+      #menu {
+        position: fixed;
+        top: -101vh;
+        opacity: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(255,255,255,.75);
+        transition: opacity .5s, top 3s .1s;
+      }
+      #menu.active {
+        top: 0;
+        opacity: 1;
+        transition: opacity .5s;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="menu">
+        <ul>
+          <li>I'm a menu Item</li>
+          <li>I'm a menu Item</li>
+          <li>I'm a menu Item</li>
+        </ul>
+
+      </div>
+      <div class="content">
+        <button id="open-menu">Click Me!</button>
+      </div>
+      <script>
+
+        var button = document.getElementById('open-menu');
+        var menu = document.getElementById('menu');
+
+
+        button.addEventListener('click', function(){
+          menu.classList += ' active';
+        });
+      </script>
+    </div>
+  </body>
+</html>
