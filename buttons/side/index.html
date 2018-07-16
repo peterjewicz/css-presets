@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Flex Box Vertical Center</title>
+    <style>
+
+      button {
+        background: #10a7d8;
+        border: none;
+        color: white;
+        width: 75px;
+        height: 25px;
+        transition: all .5s;
+        cursor: pointer;
+
+        /* So it's not in the corner */
+        position:absolute;
+        top: 25%;
+        left: 25%;
+      }
+
+      button:hover {
+        background: #0c7b9f;
+      }
+
+      button:before{
+        content: '';
+        background: #0c7b9f;
+        position: absolute;
+        left: -25px;
+        top: 0;
+        height: 25px;
+        width: 25px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <button>SUBMIT</button>
+    </div>
+  </body>
+</html>
