@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Flex Box Vertical Center</title>
+    <style>
+
+      body,html {
+        margin: 0;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .wrapper {
+        height: 100vh;
+      }
+
+
+      .dot {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: blue;
+        transition: all .5s;
+        margin: 0 auto;
+      }
+
+      .dot:hover {
+        background: red;
+        transform: scale(2);
+      }
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="dot"></div>
+      </div>
+    </div>
+  </body>
+</html>
